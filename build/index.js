@@ -530,7 +530,6 @@ var images = {
     'enemy': 'assets/spaceships/enemy.png',
     'redBullet': 'assets/bullets/red.png',
     'greenBullet': 'assets/bullets/green.png',
-    'logo': 'assets/logo/logo.png'
 };
 
 var stars = [];
@@ -797,30 +796,29 @@ function draw() {
     if(tutorialI < tutorial.length) {
 	cursor('default');
 	tutorialT += 0.1;
-	background(0);
+	background(0, 0, 0, 0);
 	textFont('ArchivoBlackRegular');
 	fill(255);
 	noStroke();
 	textAlign(CENTER, TOP);
 	textSize(40);
-	text(tutorial[tutorialI][0], width * 0.5, 120);
+	text(tutorial[tutorialI][0], width * 0.5, 20);
 	textAlign(LEFT, TOP);
 	textSize(20);
-	text(tutorial[tutorialI][1], 25, 200);
+	text(tutorial[tutorialI][1], 25, 90);
 	if(drawButton("[RET] NEXT PAGE", width * 0.5, height - 40, tutorialT)) {
 	    tutorialT = 0;
 	    tutorialI++;
 	}
 	mouseClick = false;
 	keyRelease = [];
-	image(images.logo, width * 0.5, 100, width, 170);
 	return;
     }
     for(var t in timers) {
 	timers[t] += timeSpeed;
     }
     cursor('default');
-    background(0);
+    background(0, 0, 0, 0);
 
     if(stages[currentStage].timers) {
 	for(var i = 0; i < stages[currentStage].timers.length; i++) {
