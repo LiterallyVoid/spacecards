@@ -319,7 +319,7 @@ Enemy.prototype.update = function() {
     collideBullets({x: this.x, y: this.y, r: 32}, true, function(dmg) {
 	this.damage(dmg);
     }.bind(this));
-    this.y += timeSpeed * 0.5 * this.speed;
+    this.y += timeSpeed * 1.5 * this.speed;
     if(this.health <= 0) {
 	addScore([5, 9, 20][this.t], this.x, this.y);
 	explosion(5, this.x, this.y);
