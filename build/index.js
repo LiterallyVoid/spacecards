@@ -130,7 +130,9 @@ function collideBullets(c, isEnemy, damageFunc) {
     for(var i = 0; i < bullets.length; i++) {
 	if(bullets[i].collide(c, isEnemy)) {
 	    bullets[i].doDamage(damageFunc);
-	    bullets.splice(i, 1);
+	    if(bullets[i].t !== 3) {
+		bullets.splice(i, 1);
+	    }
 	    i--;
 	    continue;
 	}
