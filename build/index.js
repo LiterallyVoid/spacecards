@@ -843,7 +843,7 @@ function draw() {
     
     for(var i = 0; i < stars.length; i++) {
 	stars[i][1] += stars[i][2] * 0.02 * timeSpeed;
-	stars[i][1] = ((stars[i][1] + height + 15) % (height + 30)) - 15;
+	stars[i][1] = ((stars[i][1] + height + 15) % (height + 30)) + 15;
 	var s = stars[i][2] * 2;
 	image(images.star, stars[i][0] + shakeX * s * 0.005, stars[i][1] + shakeY * s * 0.005, s, s);
     }
