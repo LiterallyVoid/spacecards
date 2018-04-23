@@ -796,7 +796,7 @@ function draw() {
     if(tutorialI < tutorial.length) {
 	cursor('default');
 	tutorialT += 0.1;
-	background(0, 0, 0, 0);
+	background(0);
 	textFont('ArchivoBlackRegular');
 	fill(255);
 	noStroke();
@@ -818,7 +818,7 @@ function draw() {
 	timers[t] += timeSpeed;
     }
     cursor('default');
-    background(0, 0, 0, 0);
+    background(0);
 
     if(stages[currentStage].timers) {
 	for(var i = 0; i < stages[currentStage].timers.length; i++) {
