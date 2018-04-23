@@ -132,9 +132,9 @@ function collideBullets(c, isEnemy, damageFunc) {
 	    bullets[i].doDamage(damageFunc);
 	    if(bullets[i].t !== 3) {
 		bullets.splice(i, 1);
+		i--;
+		continue;
 	    }
-	    i--;
-	    continue;
 	}
     }
 };
