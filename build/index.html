@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="p5.min.js"></script>
+    <script src="index.js"></script>
+    <style>
+      @font-face {
+      font-family: "ArchivoBlackRegular";
+      src: url(assets/fonts/ArchivoBlack.ttf) format("truetype");
+      }
+      * {
+      margin: 0;
+      padding: 0;
+      }
+      body {
+      text-align: center;
+      }
+      #canvas-root {
+      position: relative;
+      margin: 0 auto;
+      background-color: #EEE;
+      width: 800px;
+      height: 600px;
+      padding: 0;
+      }
+      #p5_loading {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 800px;
+      height: 200px;
+      margin-left: -400px;
+      margin-top: -150px;
+      vertical-align: middle;
+      font-size: 30px;
+      font-family: ArchivoBlackRegular;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="canvas-root">
+      <div id="p5_loading">Loading...</div>
+    </div>
+  </body>
+</html>
