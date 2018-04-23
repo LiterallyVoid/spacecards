@@ -921,9 +921,9 @@ function draw() {
 	textAlign(CENTER, CENTER);
 	text("GAME OVER", width * 0.5, 100);
 	textSize(20);
-	text("FINAL SCORE: " + pscore, width * 0.5, 200);
+	text("FINAL SCORE: " + score, width * 0.5, 200);
 	textSize(30);
-	text("HIGH SCORE: " + hscore, width * 0.5, 240);
+	text("HIGH SCORE: " + max(hscore, score), width * 0.5, 240);
 	if(drawButton("[RET] RESTART?", width * 0.5, 300, deadTime * 0.05)) {
 	    reset();
 	}
