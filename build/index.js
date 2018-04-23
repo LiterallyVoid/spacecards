@@ -250,7 +250,7 @@ var cardTypes = [
 	},
     },
     {
-	name: 'Last Straw',
+	name: 'The Escape',
 	desc: 'Destroy all enemies and bullets\naround you in exchange for\n10 health',
 	grade: grades.COMMON,
 	use: function() {
@@ -670,7 +670,7 @@ function setup() {
     canvas.parent('canvas-root');
     imageMode(CENTER);
     for(var i = 0; i < 200; i++) {
-	stars.push([random(0, width), random(0, height), 1 / random(0.05, 0.5)]);
+	stars.push([random(0, width), random(0, height + 30), 1 / random(0.05, 0.5)]);
     }
     player = new Player();
 }
@@ -845,7 +845,7 @@ function draw() {
     
     for(var i = 0; i < stars.length; i++) {
 	stars[i][1] += stars[i][2] * 0.02 * timeSpeed;
-	stars[i][1] = (stars[i][1] + height) % height;
+	stars[i][1] = ((stars[i][1] + height + 15) % (height + 30)) - 15;
 	var s = stars[i][2] * 2;
 	image(images.star, stars[i][0] + shakeX * s * 0.005, stars[i][1] + shakeY * s * 0.005, s, s);
     }
